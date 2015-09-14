@@ -1,1 +1,41 @@
+# MISC
+snippet cl "console.log(...)" b
+console.log($0);
+endsnippet
 
+# Node.js
+snippet re "require" b
+const `!p
+def formatVariableName(path):
+	if path == 'react/addons':
+		return 'React'
+
+	lastPart = path.split('/')[-1]
+  if lastPart == 'lodash':
+		return '_'
+	elif lastPart == 'jquery':
+		return '$'
+	else:
+		return re.sub(r'[_\-]', '', lastPart.title())
+snip.rv = formatVariableName(t[1])
+` = require('${1}');$0
+endsnippet
+
+snippet me "module.exports" b
+module.exports = $0;
+endsnippet
+
+# JSDoc
+snippet cm
+/**
+ * ${0:${VISUAL}}
+ */
+endsnippet
+
+snippet pr "@param {...}"
+@param {${2:type}} ${1:name} - ${3:description}
+endsnippet
+
+snippet rt "@return {...}"
+@return {${1:type}} - ${0:description}
+endsnippet

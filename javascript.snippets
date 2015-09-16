@@ -57,3 +57,28 @@ function $1($2) {
 	$3
 }
 endsnippet
+
+# Tests
+snippet ds "describe a test suite" b
+describe('#$1', function() {
+	$2
+});
+endsnippet
+
+snippet it "describe a test" b
+it('$1', function() {
+	$2
+});
+endsnippet
+
+snippet ae "afterEach" b
+afterEach(function($1) {
+	$2
+});
+endsnippet
+
+snippet be "beforeEach" b
+beforeEach(function($1) {
+	$2
+});
+endsnippet

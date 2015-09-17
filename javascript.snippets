@@ -1,9 +1,13 @@
-# MISC
-snippet cl "console.log(...)" b
+############## MISC
+snippet cl "console.log(...)" i
 console.log($0);
 endsnippet
 
-# Node.js
+snippet js "JSON.stringify formatted" i
+JSON.stringify($1, null, 2)$2
+endsnippet
+
+############## Node.js
 snippet re "require" b
 const `!p
 def formatVariableName(path):
@@ -25,7 +29,7 @@ snippet me "module.exports" b
 module.exports = $0;
 endsnippet
 
-snippet ee "exports" b
+snippet ee "exports"
 exports = $0;
 endsnippet
 
@@ -33,7 +37,7 @@ snippet rr "just require"
 require('$1');
 endsnippet
 
-# JSDoc
+############## JSDoc
 snippet cm
 /**
  * ${0:${VISUAL}}
@@ -58,7 +62,7 @@ function $1($2) {
 }
 endsnippet
 
-# Tests
+############## Tests
 snippet ds "describe a test suite" b
 describe('#$1', function() {
 	$2
@@ -66,7 +70,7 @@ describe('#$1', function() {
 endsnippet
 
 snippet it "describe a test" b
-it('$1', function() {
+it('Should $1', function() {
 	$2
 });
 endsnippet

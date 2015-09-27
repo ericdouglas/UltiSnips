@@ -1,4 +1,16 @@
 ############## MISC
+snippet fn "function" i
+function $1($2) {
+	$3
+}
+endsnippet
+
+snippet af "function" i
+function($1) {
+	$2
+}
+endsnippet
+
 snippet cl "console.log(...)" i
 console.log($0);
 endsnippet
@@ -54,12 +66,6 @@ endsnippet
 
 snippet ct "@constructor"
 @constructor
-endsnippet
-
-snippet fn "function"
-function $1($2) {
-	$3
-}
 endsnippet
 
 ############## Tests

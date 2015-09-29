@@ -1,4 +1,4 @@
-############## MISC
+############# MISC
 snippet fn "function" i
 function $1($2) {
 	$3
@@ -19,7 +19,7 @@ snippet js "JSON.stringify formatted" i
 JSON.stringify($1, null, 2)$2
 endsnippet
 
-############## Node.js
+############# Node.js
 snippet re "require" b
 const `!p
 def formatVariableName(path):
@@ -49,7 +49,11 @@ snippet rr "just require"
 require('$1');
 endsnippet
 
-############## JSDoc
+snippet vr "ES5 require"
+var $1 = require('$1');
+endsnippet
+
+############# JSDoc
 snippet cm
 /**
  * ${0:${VISUAL}}
@@ -68,7 +72,7 @@ snippet ct "@constructor"
 @constructor
 endsnippet
 
-############## Tests
+############# Tests
 snippet ds "describe a test suite" b
 describe('#$1', function() {
 	$2

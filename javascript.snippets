@@ -19,10 +19,16 @@ snippet js "JSON.stringify formatted" i
 JSON.stringify($1, null, 2)
 endsnippet
 
-snippet if "if/else" i
+snippet if "if statement" i
 if ($1) {
 	$2
 }$3
+endsnippet
+
+snippet el "else statement" i
+else {
+	$1
+}$2
 endsnippet
 
 ############# Node.js

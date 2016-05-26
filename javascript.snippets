@@ -139,3 +139,28 @@ endsnippet
 snippet ed "export default"
 export default $1;
 endsnippet
+
+############# Angular 1.x
+snippet ng "angular structure" b
+(function() {
+
+	'use strict';
+
+	angular
+		.module('$1')
+		.$2('$3', $3);
+
+	$3.$inject = [];
+
+	function $3() {
+		var vm = this;$4
+
+		///////////// Public Properties
+		///////////// Private Properties
+		///////////// Public Methods
+		///////////// Private Methods
+		///////////// Function Declarations
+
+	}
+})();
+endsnippet

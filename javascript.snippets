@@ -164,3 +164,13 @@ snippet ng "angular structure" b
 	}
 })();
 endsnippet
+
+snippet ngm "angular module" b
+(function() {
+	
+	'use strict';
+
+	angular
+		.module('$1', [$2]);
+})();
+endsnippet

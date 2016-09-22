@@ -132,8 +132,21 @@ expect($1).$2;
 endsnippet
 
 ############# ES6
-snippet im "ES6 import"
-import $1 from '$1';
+snippet im "import" b
+import `!p
+def formatVariableName(path):
+	if path == 'react':
+		return 'React'
+
+	lastPart = path.split('/')[-1]
+  if lastPart == 'lodash':
+		return '_'
+	elif lastPart == 'jquery':
+		return '$'
+	else:
+		return re.sub(r'[_\-]', '', lastPart.title())
+snip.rv = formatVariableName(t[1])
+` from '${1}';$0
 endsnippet
 
 snippet ed "export default"

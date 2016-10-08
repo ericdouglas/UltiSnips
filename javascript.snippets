@@ -195,6 +195,24 @@ snippet ngm "angular module" b
 })();
 endsnippet
 
+snippet ngd "angular directive" b
+(function() {
+
+	'use strict';
+
+	angular
+		.module('$1')
+		.directive('$3', $3);
+
+	$3.$inject = [];
+
+	var $3 = {
+		$4
+	};
+
+})();
+endsnippet
+
 snippet cln "angular console.log" b
 $log.log('$1');$2
 endsnippet

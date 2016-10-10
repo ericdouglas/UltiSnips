@@ -215,6 +215,42 @@ snippet ngd "angular directive" b
 })();
 endsnippet
 
+snippet ngdc "angular directive using controller" b
+(function() {
+
+	'use strict';
+
+	angular
+		.module('$1')
+		.directive('$3', $3);
+
+	$3.$inject = [];
+
+	function $3($4) {
+		return {
+			restrict: 'EA',
+			transclude: false,
+			controller: controller,
+			controllerAs: 'vm',
+			bindToController: true,
+			templateUrl: '',
+			scope: {$5}
+		};
+	}
+
+	function controller() {
+		var vm = this;
+
+		///////////// Properties
+
+		///////////// Methods
+
+		///////////// Function Declarations
+	}
+
+})();
+endsnippet
+
 snippet cln "angular console.log" b
 $log.log('$1');$2
 endsnippet

@@ -5,34 +5,34 @@ snippet c "curly braces with identation" i
 }
 endsnippet
 
-snippet fn "function" i
+snippet fn "named function" i
 function $1($2) {
 	$3
 }$4
 endsnippet
 
-snippet ff "function" i
+snippet ff "anonymous function" i
 function($1) {
 	$2
 }$3
 endsnippet
 
-snippet af "function" i
+snippet af "arrow function" i
 ($1) => {
 	$2
 }$3
 endsnippet
 
-snippet fa "function" i
+snippet fa "one line arrow function" i
 ($1) => $2
 endsnippet
 
 snippet cl "console.log(...)" i
-console.log($1);
+console.log($1)
 endsnippet
 
 snippet clj "JSON.stringify formatted" i
-console.log(JSON.stringify($1, null, 2));
+console.log(JSON.stringify($1, null, 2))
 endsnippet
 
 snippet if "if statement" i
@@ -70,23 +70,23 @@ def formatVariableName(path):
 	else:
 		return re.sub(r'[_\-]', '', lastPart.title())
 snip.rv = formatVariableName(t[1])
-` = require('${1}');$0
+` = require('${1}')$0
 endsnippet
 
 snippet me "module.exports" b
-module.exports = $0;
+module.exports = $0
 endsnippet
 
 snippet ee "exports"
-exports = $0;
+exports = $0
 endsnippet
 
 snippet rr "just require"
-require('$1');
+require('$1')
 endsnippet
 
 snippet vr "ES5 require"
-var $1 = require('$1');
+var $1 = require('$1')
 endsnippet
 
 ############# JSDoc
@@ -101,7 +101,7 @@ snippet pr "@param {...}"
 endsnippet
 
 snippet rt "@return {...}"
-@return {${1:type}} - ${0:description}
+@return {${1:type}} - ${2:description}
 endsnippet
 
 snippet ct "@constructor"
@@ -112,29 +112,29 @@ endsnippet
 snippet ds "describe a test suite" b
 describe('#$1', function() {
 	$2
-});
+})
 endsnippet
 
 snippet it "describe a test" b
 it('Should $1', function() {
 	$2
-});
+})
 endsnippet
 
 snippet ae "afterEach" b
 afterEach(function($1) {
 	$2
-});
+})
 endsnippet
 
 snippet be "beforeEach" b
 beforeEach(function($1) {
 	$2
-});
+})
 endsnippet
 
 snippet ex "expect" b
-expect($1).$2;
+expect($1).$2
 endsnippet
 
 ############# ES6
@@ -152,11 +152,11 @@ def formatVariableName(path):
 	else:
 		return re.sub(r'[_\-]', '', lastPart.title())
 snip.rv = formatVariableName(t[1])
-` from '${1}';$0
+` from '${1}'$0
 endsnippet
 
 snippet ed "export default"
-export default $1;
+export default $1
 endsnippet
 
 ############# Angular 1.x

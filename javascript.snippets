@@ -1,4 +1,10 @@
 ############# MISC
+snippet for "for" i
+for ($1) {
+	$2
+}$3
+endsnippet
+
 snippet c "curly braces with identation" i
 {
 	$1
@@ -63,12 +69,14 @@ def formatVariableName(path):
 		return 'React'
 
 	lastPart = path.split('/')[-1]
+
   if lastPart == 'lodash':
 		return '_'
 	elif lastPart == 'jquery':
 		return '$'
 	else:
 		return re.sub(r'[_\-]', '', lastPart.title())
+
 snip.rv = formatVariableName(t[1])
 ` = require('${1}')$0
 endsnippet

@@ -1,31 +1,31 @@
 ############# MISC
 snippet for "for" i
 for ($1) {
-	$2
+  $2
 }$3
 endsnippet
 
 snippet c "curly braces with identation" i
 {
-	$1
+  $1
 }
 endsnippet
 
 snippet fn "named function" i
 function $1($2) {
-	$3
+  $3
 }$4
 endsnippet
 
 snippet ff "anonymous function" i
 function($1) {
-	$2
+  $2
 }$3
 endsnippet
 
 snippet af "arrow function" i
 ($1) => {
-	$2
+  $2
 }$3
 endsnippet
 
@@ -43,21 +43,21 @@ endsnippet
 
 snippet if "if statement" i
 if ($1) {
-	$2
+  $2
 }$3
 endsnippet
 
 snippet el "else statement" i
 else {
-	$1
+  $1
 }$2
 endsnippet
 
 snippet iife "Immediately-invoked function expression"
 (function() {
-	'use strict';
+  'use strict';
 
-	$1
+  $1
 })();
 endsnippet
 
@@ -65,17 +65,17 @@ endsnippet
 snippet re "require" b
 const `!p
 def formatVariableName(path):
-	if path == 'react/addons':
-		return 'React'
+  if path == 'react/addons':
+    return 'React'
 
-	lastPart = path.split('/')[-1]
+  lastPart = path.split('/')[-1]
 
   if lastPart == 'lodash':
-		return '_'
-	elif lastPart == 'jquery':
-		return '$'
-	else:
-		return re.sub(r'[_\-]', '', lastPart.title())
+    return '_'
+  elif lastPart == 'jquery':
+    return '$'
+  else:
+    return re.sub(r'[_\-]', '', lastPart.title())
 
 snip.rv = formatVariableName(t[1])
 ` = require('${1}')$0
@@ -117,27 +117,36 @@ snippet ct "@constructor"
 endsnippet
 
 ############# Tests
+##### jest
+snippet t "add jest test" i
+test('$1', () => {
+  $2
+})
+endsnippet
+
+##### end jest
+
 snippet ds "describe a test suite" b
 describe('#$1', function() {
-	$2
+  $2
 })
 endsnippet
 
 snippet it "describe a test" b
 it('Should $1', function() {
-	$2
+  $2
 })
 endsnippet
 
 snippet ae "afterEach" b
 afterEach(function($1) {
-	$2
+  $2
 })
 endsnippet
 
 snippet be "beforeEach" b
 beforeEach(function($1) {
-	$2
+  $2
 })
 endsnippet
 
@@ -149,16 +158,16 @@ endsnippet
 snippet im "import" b
 import `!p
 def formatVariableName(path):
-	if path == 'react':
-		return 'React'
+  if path == 'react':
+    return 'React'
 
-	lastPart = path.split('/')[-1]
+  lastPart = path.split('/')[-1]
   if lastPart == 'lodash':
-		return '_'
-	elif lastPart == 'jquery':
-		return '$'
-	else:
-		return re.sub(r'[_\-]', '', lastPart.title())
+    return '_'
+  elif lastPart == 'jquery':
+    return '$'
+  else:
+    return re.sub(r'[_\-]', '', lastPart.title())
 snip.rv = formatVariableName(t[1])
 ` from '${1}'$0
 endsnippet
@@ -171,60 +180,60 @@ endsnippet
 snippet ng "angular structure" b
 (function() {
 
-	'use strict';
+  'use strict';
 
-	angular
-		.module('$1')
-		.$2('$3', $3);
+  angular
+    .module('$1')
+    .$2('$3', $3);
 
-	$3.$inject = [];
+  $3.$inject = [];
 
-	function $3() {
-		var vm = this;$4
+  function $3() {
+    var vm = this;$4
 
-		///////////// Public Properties
+    ///////////// Public Properties
 
-		///////////// Private Properties
+    ///////////// Private Properties
 
-		///////////// Public Methods
+    ///////////// Public Methods
 
-		///////////// Private Methods
+    ///////////// Private Methods
 
-		///////////// Events
+    ///////////// Events
 
-		///////////// Bootstrap
+    ///////////// Bootstrap
 
-		///////////// Function Declarations
-	}
+    ///////////// Function Declarations
+  }
 })();
 endsnippet
 
 snippet ngm "angular module" b
 (function() {
-	
-	'use strict';
+  
+  'use strict';
 
-	angular
-		.module('$1', [$2]);
+  angular
+    .module('$1', [$2]);
 })();
 endsnippet
 
 snippet ngd "angular directive" b
 (function() {
 
-	'use strict';
+  'use strict';
 
-	angular
-		.module('$1')
-		.directive('$3', $3);
+  angular
+    .module('$1')
+    .directive('$3', $3);
 
-	$3.$inject = [];
+  $3.$inject = [];
 
-	function $3($4) {
-		return {
-			$5
-		};
-	}
+  function $3($4) {
+    return {
+      $5
+    };
+  }
 
 })();
 endsnippet
@@ -232,35 +241,35 @@ endsnippet
 snippet ngdc "angular directive using controller" b
 (function() {
 
-	'use strict';
+  'use strict';
 
-	angular
-		.module('$1')
-		.directive('$3', $3);
+  angular
+    .module('$1')
+    .directive('$3', $3);
 
-	$3.$inject = [];
+  $3.$inject = [];
 
-	function $3($4) {
-		return {
-			restrict: 'EA',
-			transclude: false,
-			controller: controller,
-			controllerAs: 'vm',
-			bindToController: true,
-			templateUrl: '',
-			scope: {$5}
-		};
-	}
+  function $3($4) {
+    return {
+      restrict: 'EA',
+      transclude: false,
+      controller: controller,
+      controllerAs: 'vm',
+      bindToController: true,
+      templateUrl: '',
+      scope: {$5}
+    };
+  }
 
-	function controller() {
-		var vm = this;
+  function controller() {
+    var vm = this;
 
-		///////////// Properties
+    ///////////// Properties
 
-		///////////// Methods
+    ///////////// Methods
 
-		///////////// Function Declarations
-	}
+    ///////////// Function Declarations
+  }
 
 })();
 endsnippet

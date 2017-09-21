@@ -24,7 +24,11 @@ endsnippet
 
 snippet dfm "defmodule block" i
 defmodule $1 do
+  @moduledoc """
   $2
+  """
+  
+  $3
 end
 endsnippet
 
@@ -33,5 +37,20 @@ snippet mdc "@moduledoc" i
 @moduledoc """
 $1
 """
+endsnippet
+
+snippet dfmt "defmodule for test" i
+defmodule ${1:ModuleName}Test do
+  use ExUnit.Case
+  doctest $1
+
+  $2
+end
+endsnippet
+
+snippet tt "test block" i
+test "$1" do
+  assert $2
+end
 endsnippet
 

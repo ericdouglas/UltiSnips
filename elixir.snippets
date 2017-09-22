@@ -1,3 +1,11 @@
+snippet ip "IO.puts()" i
+IO.puts($1)
+endsnippet
+
+snippet ipi "IO.puts + inspect" i
+inspect($1) |> IO.puts
+endsnippet
+
 snippet doc "doc block" i
 @doc """
 $1
